@@ -1,0 +1,25 @@
+<button type="button" class="btn btn-info" (click)="childModal.show()">Open modal form</button>
+<app-common-modal #childModal [title]="'Ajout voiture'">
+
+  <!--Remplacera le <ng-content select=".modal-close-button"></ng-content> dans common-modal-component.html-->
+  <div class="modal-close-button">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="childModal.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <!--Le body du modal va ici (labels, inputs, divs, etc...), remplacera le <ng-content select=".modal-body"></ng-content> dans common-modal-component.html-->
+    Nom:
+    <input type="text">
+    <br> Prénom:
+    <input type="text">
+  </div>
+
+  <!--Le footer du modal va ici (boutons, etc...), remplacera le <ng-content select=".modal-footer"></ng-content> dans common-modal-component.html-->
+  <div class="modal-footer">
+    <div class="pull-left">
+      <button class="btn btn-default" (click)="childModal.hide()"> Cancel </button>
+    </div>
+  </div>
+</app-common-modal>

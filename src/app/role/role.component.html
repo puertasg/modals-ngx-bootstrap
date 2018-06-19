@@ -1,0 +1,15 @@
+<button type="button" class="btn btn-danger" (click)="childModal.show()">Open modal role</button>
+<app-common-modal #childModal [title]="'Choisissez votre profil'">
+  <div class="modal-body">
+    <!--Le body du modal va ici (labels, inputs, divs, etc...), remplacera le <ng-content select=".modal-body"></ng-content> dans common-modal-component.html-->
+    <div class="col-4">
+      <h5>ROLE 1</h5>
+    </div>
+    <div class="col-4">
+      <h5>ROLE 2</h5>
+    </div>
+    <div class="col-4">
+      <h5>ROLE 3</h5>
+    </div>
+  </div>
+</app-common-modal>
